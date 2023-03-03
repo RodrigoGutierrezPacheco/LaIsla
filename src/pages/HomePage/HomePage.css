@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'bootstrap/dist/css/bootstrap.min.css';
 body{
 	font-family: 'Marcellus', serif;
 
@@ -134,6 +135,48 @@ body{
 		text-align: justify;
 		width: 90%;
 		margin-left: 5%;
+	}
+
+	.button{
+		margin-top: 10%;
+	}
+
+	.icon{
+		width: 50%;
+	}
+
+	.buttonConocenos{
+		margin: 1px solid black;
+		color: black;
+	}
+
+	.footer{
+		margin-top: 2rem;
+	}
+
+	.pagos{
+		background-color: #FFD361;
+		height: 7rem;
+	}
+
+	.envios{
+		height: 7rem;
+		background-color: #FFCE50;
+	}
+
+	.entregas{
+		height: 7rem;
+		background-color: #FEC942;
+	}
+
+	.isla{
+		height: 7rem;
+		background-color: #FFC328;
+	}
+
+	.contacto{
+		height: 7rem;
+		background-color: #FFBB0D;
 	}
 
 }

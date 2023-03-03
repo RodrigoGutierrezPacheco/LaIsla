@@ -1,4 +1,5 @@
 import "./HomePage.css";
+import { Button } from "react-bootstrap";
 
 function HomePage() {
   return (
@@ -59,6 +60,54 @@ function HomePage() {
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
 			<h1 className="productosLaIsla">Productos La Isla, de Guerrero para todo Mexico</h1>
 			<h3 className="son">Son cosechados con los mas altos estandades de calidad, nos encargamos de todo el proceso desde el principio hasta el fin.</h3>
+			<Button className="button" variant="secondary">¡Conocenos!</Button>{' '}
+			<div className="footer">
+				<div className="flex pagos">
+					<div>
+						<img className="icon" src="images/tarjeta.png" alt="" />
+					</div>
+					<div>
+						<h1>Pagos</h1>
+						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+					</div>
+				</div>
+				<div className="flex envios">
+					<div>
+						<img className="icon" src="images/caja.png" alt="" />
+					</div>
+					<div>
+						<h1>Envios</h1>
+						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+					</div>
+				</div>
+				<div className="flex entregas">
+					<div>
+						<img className="icon" src="images/ubicacion.png" alt="" />
+					</div>
+					<div>
+						<h1>Entregas</h1>
+						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+					</div>
+				</div>
+				<div className="flex isla">
+					<div>
+						<img className="icon" src="images/red.png" alt="" />
+					</div>
+					<div>
+						<h1>La Isla</h1>
+						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+					</div>
+				</div>
+				<div className="flex contacto">
+					<div>
+						<img className="icon" src="images/contacto.png" alt="" />
+					</div>
+					<div>
+						<h1>Contacto</h1>
+						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+					</div>
+				</div>
+			</div>
     </div>
   );
 }
