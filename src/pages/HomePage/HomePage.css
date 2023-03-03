@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+	font-family: 'Marcellus', serif;
+
+}
+
 
 @media (max-width:426px){
 	.logo1{
@@ -23,6 +28,8 @@
 		margin-top: 8%;
 		margin-left: 15%;
 		margin-right: 15%;
+		font-family: 'Marcellus', serif;
+		font-size: 2rem;
 	}
 	
 	.flex{
