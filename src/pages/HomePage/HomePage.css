@@ -143,6 +143,7 @@ body{
 
 	.icon{
 		width: 50%;
+		margin-left: 25%;
 	}
 
 	.buttonConocenos{
@@ -156,27 +157,38 @@ body{
 
 	.pagos{
 		background-color: #FFD361;
-		height: 7rem;
+		align-items: center;
+		height: 10rem;
 	}
 
 	.envios{
-		height: 7rem;
+		height: 10rem;
 		background-color: #FFCE50;
+		align-items: center;
+
 	}
 
 	.entregas{
-		height: 7rem;
+		height: 10rem;
 		background-color: #FEC942;
+		align-items: center;
 	}
 
 	.isla{
-		height: 7rem;
+		height: 10rem;
 		background-color: #FFC328;
+		align-items: center;
 	}
 
 	.contacto{
-		height: 7rem;
+		height: 10rem;
 		background-color: #FFBB0D;
+		align-items: center;
+
+	}
+
+	.start{
+		text-align: start;
 	}
 
 }

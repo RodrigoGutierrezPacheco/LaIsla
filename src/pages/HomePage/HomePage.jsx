@@ -62,13 +62,13 @@ function HomePage() {
 			<h3 className="son">Son cosechados con los mas altos estandades de calidad, nos encargamos de todo el proceso desde el principio hasta el fin.</h3>
 			<Button className="button" variant="secondary">¡Conocenos!</Button>{' '}
 			<div className="footer">
-				<div className="flex pagos">
+				<div className="flex pagos center">
 					<div>
 						<img className="icon" src="images/tarjeta.png" alt="" />
 					</div>
 					<div>
-						<h1>Pagos</h1>
-						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h1 className="title start">Pagos</h1>
+						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 				<div className="flex envios">
@@ -76,8 +76,8 @@ function HomePage() {
 						<img className="icon" src="images/caja.png" alt="" />
 					</div>
 					<div>
-						<h1>Envios</h1>
-						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h1 className="title start">Envios</h1>
+						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 				<div className="flex entregas">
@@ -85,8 +85,8 @@ function HomePage() {
 						<img className="icon" src="images/ubicacion.png" alt="" />
 					</div>
 					<div>
-						<h1>Entregas</h1>
-						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h1 className="title start">Entregas</h1>
+						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 				<div className="flex isla">
@@ -94,8 +94,8 @@ function HomePage() {
 						<img className="icon" src="images/red.png" alt="" />
 					</div>
 					<div>
-						<h1>La Isla</h1>
-						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h1 className="title start">La Isla</h1>
+						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 				<div className="flex contacto">
@@ -103,8 +103,8 @@ function HomePage() {
 						<img className="icon" src="images/contacto.png" alt="" />
 					</div>
 					<div>
-						<h1>Contacto</h1>
-						<h2>Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h1  className="title start">Contacto</h1>
+						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 			</div>
