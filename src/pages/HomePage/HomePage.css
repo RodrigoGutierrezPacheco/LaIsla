@@ -94,5 +94,18 @@
 		margin-top: 20%;
 	}
 
+	.productosLaIsla{
+		justify-content: center;
+		text-align: justify;
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	.son{
+		color: grey;
+		text-align: justify;
+		width: 90%;
+		margin-left: 5%;
+	}
 
 }

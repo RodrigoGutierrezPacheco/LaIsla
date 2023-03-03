@@ -56,6 +56,9 @@ function HomePage() {
 				</div>
 				<h3 className="ourHoney">Nuestros Limones son de la mas alta calidad</h3>
 			</div>
+			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
+			<h1 className="productosLaIsla">Productos La Isla, de Guerrero para todo Mexico</h1>
+			<h3 className="son">Son cosechados con los mas altos estandades de calidad, nos encargamos de todo el proceso desde el principio hasta el fin.</h3>
     </div>
   );
 }
