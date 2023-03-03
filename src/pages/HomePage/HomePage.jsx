@@ -66,45 +66,55 @@ function HomePage() {
 					<div>
 						<img className="icon" src="images/tarjeta.png" alt="" />
 					</div>
-					<div>
+					<div className="box">
 						<h1 className="title start">Pagos</h1>
-						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h2 className="start grey">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
 					</div>
 				</div>
 				<div className="flex envios">
 					<div>
 						<img className="icon" src="images/caja.png" alt="" />
 					</div>
-					<div>
+					<div className="box">
 						<h1 className="title start">Envios</h1>
-						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h2 className="start grey">Envios seguros con diferentes paqueterias.</h2>
 					</div>
 				</div>
 				<div className="flex entregas">
 					<div>
 						<img className="icon" src="images/ubicacion.png" alt="" />
 					</div>
-					<div>
+					<div className="box">
 						<h1 className="title start">Entregas</h1>
-						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h2 className="start grey">Contactanos para ver la mejor opcion de tu entrega.</h2>
 					</div>
 				</div>
 				<div className="flex isla">
 					<div>
 						<img className="icon" src="images/red.png" alt="" />
 					</div>
-					<div>
+					<div className="box">
 						<h1 className="title start">La Isla</h1>
-						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h2 className="start grey"> Siguenos en nuestras diferentes redes sociales.</h2>
+						<div className="redesFlex">
+						 <img className="redes" src="images/fb.png" alt="" />
+						 <img className="redes" src="images/instagram.png" alt="" />
+						 <img className="redes" src="images/tiktok.png" alt="" />
+						</div>
 					</div>
 				</div>
 				<div className="flex contacto">
 					<div>
 						<img className="icon" src="images/contacto.png" alt="" />
 					</div>
-					<div>
+					<div className="box">
 						<h1  className="title start">Contacto</h1>
-						<h2 className="start">Aceptamos pagos con Paypal, depositos, transferencias.</h2>
+						<h2 className="start grey">Whatsapp, Telefono, Correo Electronico.</h2>
+						<div className="redesFlex1">
+							<img className="contact" src="images/whatsapp.png" alt="" />
+							<img className="contact" src="images/telefono.png" alt="" />
+							<img className="contact" src="images/correo.png" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -191,4 +191,38 @@ body{
 		text-align: start;
 	}
 
+	.box{
+		width: 100%;
+	}
+
+	.grey{
+		color: grey;
+	}
+
+	.redes{
+		width: 30%;
+		opacity: .5;
+	}
+
+	.redesFlex{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-right: 60%;
+		margin-top: 5%;
+	}
+
+	.redesFlex1{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-right: 60%;
+		margin-top: 5%;
+	}
+
+	.contact{
+		width: 25%;
+		opacity: .5;
+	}
+
 }
