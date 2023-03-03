@@ -85,7 +85,14 @@
 
 	.miel{
 		background-color: #EFEAE3;
-		height: 20rem;
+		height: 40rem;
 		background-image: url(/public/images/honeyCumbPatron.png);
+		padding-top: 1%;
 	}
+
+	.titleLimon{
+		margin-top: 20%;
+	}
+
+
 }

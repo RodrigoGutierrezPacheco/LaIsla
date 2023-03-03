@@ -25,7 +25,7 @@ function HomePage() {
 			</div>
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
 			<div className="miel">
-				<h1>Miel</h1>
+				<h1 className="titleMiel">Miel</h1>
 				<div className="flex2">
 					<img className="miel1" src="images/miel1.png" alt="" />
 					<div className="">
@@ -40,6 +40,21 @@ function HomePage() {
 					</div>
 				</div>
 				<h3 className="ourHoney">Nuestra miel es la mas dulce y saludable de todo Mexico.</h3>
+				<h1 className="titleLimon">Limon</h1>
+				<div className="flex2">
+					<img className="miel1" src="images/limon1.png" alt="" />
+					<div className="">
+						<div className="flex1">
+							<img className="check" src="images/check.png" alt="" />
+							<h5>Limon 100% Natural</h5>
+						</div>
+						<div className="flex1">
+							<img className="check" src="images/check.png" alt="" />
+							<h5>De la mas alta calidad</h5>
+						</div>
+					</div>
+				</div>
+				<h3 className="ourHoney">Nuestros Limones son de la mas alta calidad</h3>
 			</div>
     </div>
   );
