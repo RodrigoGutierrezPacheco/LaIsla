@@ -6,19 +6,19 @@ function HomePage() {
 			<img className="logo1" src="images/logo1.png" alt="" />
       <div>
 				<img className="nature" src="images/nature.png" alt="" />
-				<h2>Productos</h2>
+				<h2 className="title">Productos</h2>
 				<div className="flex productos">
 				 <div>
 					 <img className="product" src="images/miel.png" alt="" />
-					 <h3 className="title">Miel</h3>
+					 <h3 className="title1">Miel</h3>
 				 </div>
 				 <div>
 					 <img className="product" src="images/limon.png" alt="" />
-					 <h3 className="title">Limon</h3>
+					 <h3 className="title1">Limon</h3>
 				 </div>
 				 <div>
 					 <img className="product" src="images/dulces.png" alt="" />
-					 <h3 className="title">Dulces</h3>
+					 <h3 className="title1">Dulces</h3>
 				 </div>
 				</div>
 				<h3 className="yourProducts">Tus productos favoritos hechos con los ingredientes de la mas alta calidad.</h3>
