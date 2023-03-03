@@ -1,0 +1,27 @@
+.logo1{
+	width: 100%;
+}
+
+.logo2{
+	width: 9%;
+	height: 9%;
+	margin-top: 8%;
+}
+
+.menu{
+	width: 8%;
+	height: 8%;
+	margin-top: 8%;
+}
+
+.laIsla{
+	margin-top: 8%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
