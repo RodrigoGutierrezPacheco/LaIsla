@@ -23,6 +23,10 @@ body{
 		width: 50vw;
 	}
 
+	.x{
+		width: 5vw;
+	}
+
 	.textoMenu{
 		margin-top: .5rem;
 		margin-bottom: .5rem;
