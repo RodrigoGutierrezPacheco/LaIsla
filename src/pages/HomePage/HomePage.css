@@ -8,7 +8,7 @@ body{
 }
 
 
-@media (max-width:431px){
+@media (max-width:501px){
 	.logo1{
 		width: 100%;
 	}
@@ -74,12 +74,12 @@ body{
 	.check{
 		width: 10%;
 		height: 10%;
-		margin-top: 9%;
 		margin-right: 5%;
 	}
 	
 	.flex1{
 		display: flex;
+		margin-top: 1rem;
 	}
 
 	.flex2{
@@ -103,9 +103,10 @@ body{
 
 	.miel{
 		background-color: #EFEAE3;
-		height: 40rem;
+		height: 33rem;
 		background-image: url(/public/images/honeyCumbPatron.png);
 		padding-top: 1%;
+		padding-top: 2rem;
 	}
 
 	.titleLimon{
@@ -147,8 +148,12 @@ body{
 	}
 
 	.buttonConocenos{
-		margin: 1px solid black;
-		color: black;
+		background-color: #FFBB0D;
+		color: white;
+		border: 2px solid black;
+		width: 30vw;
+		height: 5vh;
+		border-radius: 1rem;
 	}
 
 	.footer{
