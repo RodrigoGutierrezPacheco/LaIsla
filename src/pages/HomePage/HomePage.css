@@ -18,6 +18,17 @@ body{
 		height: 9%;
 		margin-top: 8%;
 	}
+
+	.logo3{
+		width: 50vw;
+	}
+
+	.textoMenu{
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
 	
 	.menu{
 		width: 8%;

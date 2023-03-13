@@ -2,50 +2,66 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 function Navbar() {
   // Subscribe to the AuthContext to gain access to
   // the values from AuthContext.Provider's `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+			backgroundColor:"#efeae3"
+		},
+	};
+
+	let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+
   return (
-    // <nav>
-    //   <Link to="/">
-    //     <button>Home</button>
-    //   </Link>
-
-    //   {isLoggedIn && (
-    //     <>
-    //       <button onClick={logOutUser}>Logout</button>
-
-    //       <Link to="/profile">
-    //         <button>Profile</button>
-    //         {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
-    //       </Link>
-
-    //       <span>{user && user.name}</span>
-    //     </>
-    //   )}
-
-    //   {!isLoggedIn && (
-    //     <>
-    //       <Link to="/signup">
-    //         {" "}
-    //         <button>Sign Up</button>{" "}
-    //       </Link>
-    //       <Link to="/login">
-    //         {" "}
-    //         <button>Login</button>{" "}
-    //       </Link>
-    //     </>
-    //   )}
-    // </nav>
-
 		<nav>
 			<div className="flex">
 				<img className="logo2" src="images/logo2.png" alt="" />
 				<h1 className="laIsla">La Isla</h1>
-				<img className="menu" src="images/menu.png" alt="" />
+				<img onClick={openModal} className="menu" src="images/menu.png" alt="" />
+				<Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+					<img className="logo3" src="images/logo1.png" alt="" />
+				<div>
+         <h1 className="textoMenu">Menu</h1>
+			   <h1 className="textoMenu">Productos</h1>
+			   <h1 className="textoMenu">Contactos</h1>
+			   <h1 className="textoMenu">Puntos de Venta</h1>
+			   <h1 className="textoMenu">Agenda tu Entrega</h1>
+				</div>
+      </Modal>
 			</div>
 		</nav>
   );
