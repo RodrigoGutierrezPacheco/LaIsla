@@ -78,7 +78,7 @@ function HomePage() {
 					</div>
 					<div className="box">
 						<h1 className="title start">Envios</h1>
-						<h2 className="start grey">Envios seguros con diferentes paqueterias.</h2>
+						<h2 className="start grey">Envio seguro con diferentes paqueterias.</h2>
 					</div>
 				</div>
 				<div className="flex entregas">

@@ -40,6 +40,10 @@ function Navbar() {
     setIsOpen(false);
   }
 
+	function home(){
+		window.location.href="/"
+	}
+
 
   return (
 		<nav>
@@ -54,13 +58,13 @@ function Navbar() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-				  <img onClick={closeModal} className="x" src="images/x.png" alt="" />
-					<img className="logo3" src="images/logo1.png" alt="" />
+				  <motion.img whileTap={{scale:1.2}} onClick={closeModal} className="x" src="images/x.png" alt="" />
+				  <motion.h1 className="textoMenu center">Menu</motion.h1>
+					<motion.img onClick={home} whileTap={{scale:1.1}} className="logo3" src="images/logo1.png" alt="" />
 				<div>
-         <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Menu</motion.h1>
 			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Productos</motion.h1>
-			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Contactos</motion.h1>
-			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Puntos de Venta</motion.h1>
+			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Pedidos</motion.h1>
+			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Contacto</motion.h1>
 			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Agenda tu Entrega</motion.h1>
 				</div>
       </Modal>

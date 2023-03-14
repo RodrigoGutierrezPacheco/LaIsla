@@ -169,6 +169,7 @@ body{
 		width: 30vw;
 		height: 5vh;
 		border-radius: 1rem;
+		margin-top: 1rem;
 	}
 
 	.footer{
@@ -209,6 +210,10 @@ body{
 		background-color: #FFBB0D;
 		align-items: center;
 
+	}
+
+	.center{
+		text-align: center;
 	}
 
 	.start{
