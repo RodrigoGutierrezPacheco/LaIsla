@@ -200,6 +200,10 @@ body{
 		align-items: center;
 	}
 
+	.footer1{
+		background-color:#FFBB0D;
+	}
+
 	.contacto{
 		height: 10rem;
 		background-color: #FFBB0D;
