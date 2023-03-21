@@ -18,7 +18,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-				<Route path="/nosotros" element={<Nosotros/>} />
 
         <Route
           path="/profile"

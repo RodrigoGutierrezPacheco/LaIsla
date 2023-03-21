@@ -113,10 +113,19 @@ function HomePage() {
 			</div>
 			</div>
 			<div className='center'>
-			 <AliceCarousel controlsStrategy={"alternates"} autoPlay={"ltr"} autoPlayInterval={200000} className="imgResponsive" keyboardNavigation={true} disableButtonsControls={true} infinite={true} mouseTracking items={items} />
+			 <AliceCarousel 
+			 animationType="fadeout"  
+			 controlsStrategy={"alternates"} 
+			 autoPlay={"ltr"} 
+			 autoPlayInterval={2000}
+			 keyboardNavigation={true} 
+			 disableButtonsControls={true} 
+			 infinite={true} 
+			 mouseTracking items={items}
+			 />
 			</div>
 		</div>
-      <motion.button onClick={nosotros} whileTap={{scale:1.2}} className="buttonConocenos">!Conocenos¡</motion.button>
+      <motion.button  whileTap={{scale:1.2}} className="buttonConocenos">!Conocenos¡</motion.button>
 			<div className="footer">
 				<div className="flex pagos center">
 					<div>
