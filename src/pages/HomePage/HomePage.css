@@ -2,15 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import "react-alice-carousel/lib/alice-carousel.css";
 body{
 	font-family: 'Marcellus', serif;
-
 }
 
 
 @media (max-width:501px){
+
+	.imgResponsive{
+		width:45vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.center{
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.logo1{
 		width: 100%;
+	}
+
+	.padding{
+		padding: .5em;
+	}
+
+	.justify{
+		text-align: justify;
+	}
+
+	.flex{
+		display: flex;
+	}
+
+	.flex0{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.text{
+		width: 45%;
+		text-align: justify;
+		align-items: center;
+		background-color: #FFBB0D;
+		margin-right: 1em;
+		padding: .4em;
+		color: white;
+	}
+
+	.text1{
+		width: 45%;
+		text-align: justify;
+		align-items: center;
+		background-color: #FFBB0D;
+		margin-left: 1em;
+		padding: .4em;
+		color: white;
 	}
 	
 	.logo2{

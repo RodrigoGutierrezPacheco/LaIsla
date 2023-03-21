@@ -7,11 +7,15 @@
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.2.5",
     "react": "^18.2.0",
+    "react-alice-carousel": "^2.7.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.8.2",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "react-spring": "^9.7.1",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
