@@ -76,10 +76,10 @@ function HomePage() {
 				<div className="tienda-online">
 				<div className="box1">
 					<img className="png marginl marginr" src="images/miel.png" alt="" />
-					<h1>Miel</h1>
-					<h1>100% Natural</h1>
-					<h1>1Lt</h1>
-					<h1>$299.00MXN</h1>
+					<h1 className="title">Miel</h1>
+					<h1 className="title">100% Natural</h1>
+					<h1 className="title">1Lt</h1>
+					<h1 className="title price">$299.00MXN</h1>
 					<button className="button1">
 						<div className="flex">
 						<img className="carrito" src="images/carrito.png" alt="" /> Comprar
@@ -88,10 +88,10 @@ function HomePage() {
 				</div>
 				<div className="box1">
 					<img className="png marginl marginr" src="images/limon.png" alt="" />
-					<h1>Limon</h1>
-					<h1>100% Natural</h1>
-					<h1>1kg</h1>
-					<h1>$199.00MXN</h1>
+					<h1 className="title">Limon</h1>
+					<h1 className="title">100% Natural</h1>
+					<h1 className="title">1kg</h1>
+					<h1 className="title">$199.00MXN</h1>
 					<button className="button1">
 						<div className="flex">
 						<img className="carrito" src="images/carrito.png" alt="" /> Comprar

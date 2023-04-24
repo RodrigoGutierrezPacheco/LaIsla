@@ -320,6 +320,10 @@ body{
 		margin-top: 1rem;
 	}
 
+	.price{
+		font-weight: 900;
+	}
+
 	.grey{
 		color: grey;
 	}
