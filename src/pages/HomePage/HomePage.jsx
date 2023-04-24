@@ -47,6 +47,10 @@ function HomePage() {
   return (
     <div>
 			<img className="logo1" src="images/logo3.png" alt="" />
+			<div>
+				<h1 className="title margint">Agropecuaria - La Isla</h1>
+				<p className="title1 margint">Tracicion y produccion apicola familiar desde el 2012, con procesos naturales Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ab consequuntur, alias quo pariatur amet magnam. Eos quam tenetur dolorem dignissimos aut aliquid officia fugit? Distinctio non atque dicta in?</p>
+			</div>
       <div>
 				<img className="nature" src="images/nature.png" alt="" />
 				<h2 className="title">Productos</h2>
@@ -64,40 +68,37 @@ function HomePage() {
 					 <h3 className="title1">Dulces</h3>
 				 </div>
 				</div>
-				<h3 className="yourProducts">Tus productos favoritos hechos con los ingredientes de la mas alta calidad.</h3>
+				<h3 className="yourProducts margint">Tus productos favoritos hechos con los ingredientes de la mas alta calidad.</h3>
 			</div>
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
-			<div className="miel">
-				<h1 className="titleMiel">Miel</h1>
-				<div className="flex2">
-					<img className="miel1" src="images/miel1.png" alt="" />
-					<div className="">
-						<div className="flex1">
-							<img className="check" src="images/check.png" alt="" />
-							<h5>Miel 100% Natural</h5>
+			<div>
+				<h1 className="title">Venta de productos naturales online</h1>
+				<div className="tienda-online">
+				<div className="box1">
+					<img className="png marginl marginr" src="images/miel.png" alt="" />
+					<h1>Miel</h1>
+					<h1>100% Natural</h1>
+					<h1>1Lt</h1>
+					<h1>$299.00MXN</h1>
+					<button className="button1">
+						<div className="flex">
+						<img className="carrito" src="images/carrito.png" alt="" /> Comprar
 						</div>
-						<div className="flex1">
-							<img className="check" src="images/check.png" alt="" />
-							<h5>De la mas alta calidad</h5>
-						</div>
-					</div>
+					</button>
 				</div>
-				<h3 className="ourHoney">Nuestra miel es la mas dulce y saludable de todo Mexico.</h3>
-				<h1 className="titleLimon">Limon</h1>
-				<div className="flex2">
-					<img className="miel1" src="images/limon1.png" alt="" />
-					<div className="">
-						<div className="flex1">
-							<img className="check" src="images/check.png" alt="" />
-							<h5>Limon 100% Natural</h5>
+				<div className="box1">
+					<img className="png marginl marginr" src="images/limon.png" alt="" />
+					<h1>Limon</h1>
+					<h1>100% Natural</h1>
+					<h1>1kg</h1>
+					<h1>$199.00MXN</h1>
+					<button className="button1">
+						<div className="flex">
+						<img className="carrito" src="images/carrito.png" alt="" /> Comprar
 						</div>
-						<div className="flex1">
-							<img className="check" src="images/check.png" alt="" />
-							<h5>De la mas alta calidad</h5>
-						</div>
-					</div>
+					</button>
+				 </div>
 				</div>
-				<h3 className="ourHoney">Nuestros Limones son de la mas alta calidad</h3>
 			</div>
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
 			<h1 className="productosLaIsla">Productos La Isla, de Guerrero para todo Mexico</h1>
@@ -182,7 +183,7 @@ function HomePage() {
 						</div>
 					</div>
 				</div>
-					<h1 className="footer1">Agropecuaria La Isla 2023 </h1>
+					<h1 className="footer1 grey">Agropecuaria La Isla 2023 </h1>
 			</div>
     </div>
   );
