@@ -21,11 +21,20 @@ body{
 		margin-right: auto;
 	}
 	.logo1{
-		width: 100%;
+		width: 80vw;
+		height: 50vh;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
 	}
 
 	.padding{
 		padding: .5em;
+	}
+
+	.wrap{
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.justify{
@@ -134,6 +143,12 @@ body{
 		margin-bottom: 5%;
 	}
 
+	.honeyCumb1{
+		width: 10%;
+
+	}
+
+
 	.check{
 		width: 10%;
 		height: 10%;
@@ -149,6 +164,19 @@ body{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
+	}
+
+	.flex3{
+		display: flex;
+		flex-direction: row-reverse;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.flex4{
+		display: flex;
+		flex-direction: column;
+		width: 20vw;
 	}
 
 	.miel1{
@@ -180,8 +208,28 @@ body{
 		padding-top: 2rem;
 	}
 
+	.contacto{
+		background-color: #FFBB0D;
+	}
+
+
+	.hr{
+		background-color:rgba(255, 211, 91, 200%) ;
+		height: .5vh;
+		border: none;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
 	.png{
 		width: 30vw;
+	}
+
+	.png1{
+		width: 15vw;
 	}
 
 	.titleLimon{
@@ -204,6 +252,29 @@ body{
 		margin-top: .5%;
 		font-weight: 700;
 		font-size: 1.5rem;
+	}
+
+	.buttonAgregar{
+		background-color: black;
+		color: white;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		height: 2.5rem;
+	}
+
+	.productos{
+		background-color: #FFD361;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.boxProductos{
+		background-color: white;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1rem;
 	}
 
 	.son{
@@ -256,7 +327,9 @@ body{
 	}
 
 	.footer{
-		margin-top: 2rem;
+	}
+
+	.mayoreoImg{
 	}
 
 	.pagos{
@@ -288,15 +361,30 @@ body{
 		background-color:#FFBB0D;
 	}
 
-	.contacto{
-		height: 10rem;
-		background-color: #FFBB0D;
+	.contac{
+		background-color: #ffffff;
 		align-items: center;
-
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.center{
 		text-align: center;
+	}
+
+	.input{
+		border: 2px solid black;
+		width: 80%;
+	}
+
+	.enviar{
+		color: white;
+		background-color: #FFBB0D;
+	}
+
+	.cuentanos{
+		height: 20vh;
 	}
 
 	.start{
