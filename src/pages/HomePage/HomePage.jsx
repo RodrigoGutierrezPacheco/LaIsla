@@ -81,13 +81,13 @@ function HomePage() {
 						<img className="png1 marginl marginr" src="images/calidad.png" alt="" />
 						<h1 className="title">Excelente Calidad</h1>
 					</div>
-					<div className="flex4">
-						<img className="png1 marginr marginl" src="images/servicio.png" alt="" />
-						<h1 className="title">Servicio al Cliente</h1>
-					</div>
 					<div className="flex4 marginr marginl">
 						<img className="png1 marginr marginl" src="images/envios.png" alt="" />
-						<h1 className="title">Envios a toda la republica</h1>
+						<h1 className="title">Envíos a toda la república</h1>
+					</div>
+					<div className="flex4 marginl marginr">
+						<img className="png1 marginl marginr " src="images/servicio.png" alt="" />
+						<h1 className="title">Servicio al Cliente</h1>
 					</div>
 				</div>
 			</div>
@@ -101,18 +101,18 @@ function HomePage() {
 			<div className="productos">
 				<div>
 				<div className="boxProductos">
-					<img className="marginl marginr" src="images/miel.png" alt="" />
-					<h1 className="title">Te de Limon</h1>
-					<p>El te de limon es mu bueno para la salud por que aporta diferentes beneficios.</p>
+					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
+					<h1 className="title1">Te de Limon</h1>
+					<p className="subtitle">El te de limon es muy bueno para la salud porque aporta diferentes beneficios.</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">Conoce Mas</button>
+					<button className="buttonAgregar">!Conoce mas¡</button>
 				</div>
 				<div className="boxProductos">
-					<img className="marginl marginr" src="images/miel.png" alt="" />
-					<h1 className="title">Endulzar con Miel</h1>
-					<p>Endulzar tus bebidas y alimentosa con miel es mejor que usar azucar.</p>
+					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
+					<h1 className="title1">Endulzar con Miel</h1>
+					<p className="subtitle">Endulzar tus bebidas y alimentos es mejor que usar azucar procecada.</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">Conoce Mas</button>
+					<button className="buttonAgregar">¡Conoce mas!</button>
 				</div>
 			</div>
 				</div>

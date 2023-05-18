@@ -321,8 +321,9 @@ body{
 
 	.boxProductos{
 		background-color: white;
-		width: 70vw;
+		width: 80vw;
 		height: 60vh;
+		padding: 1rem;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 5rem;
