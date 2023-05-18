@@ -57,22 +57,22 @@ function HomePage() {
 			</div>
 			<hr className="hr" />
 			<div>
-			<div className="flex3">
+			<div className="flex3 marginb">
 				<h1 className="title marginr">Nuestros Productos</h1>
-				<img className="honeyCumb1 marginl" src="images/honeyCumb.png" alt="" />
+				<img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
 			</div>
 			<div className="productos">
 				<div className="boxProductos">
-					<img className="marginl marginr" src="images/miel.png" alt="" />
-					<h1>Miel Natural</h1>
-					<p>$299.00 / 1 Litro</p>
+					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
+					<h1 className="title1">Miel Natural</h1>
+					<p className="subtitle">$299.00 / 1 Litro</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">Agregar al Carrito</button>
 				</div>
 				<div className="boxProductos">
-					<img className="marginl marginr" src="images/limon.png" alt="" />
-					<h1>Limon Natural</h1>
-					<p>$299.00 / 1 kilo</p>
+					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
+					<h1 className="title1">Limon Natural</h1>
+					<p className="subtitle">$299.00 / 1 kilo</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">Agregar al Carrito</button>
 				</div>
