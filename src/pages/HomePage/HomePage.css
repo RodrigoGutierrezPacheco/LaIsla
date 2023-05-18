@@ -22,7 +22,6 @@ body{
 	}
 	.logo1{
 		width: 80vw;
-		height: 50vh;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 1rem;
@@ -30,6 +29,10 @@ body{
 
 	.padding{
 		padding: .5em;
+	}
+
+	.width{
+		width: 80vw;
 	}
 
 	.wrap{
@@ -125,6 +128,12 @@ body{
 	.title{
 		margin-top: .5%;
 		font-weight: 700;
+		font-size: 2rem;
+		text-align: start;
+	}
+
+	.subtitle{
+		font-weight: 600;
 		font-size: 1.5rem;
 	}
 
@@ -192,12 +201,41 @@ body{
 		justify-content: center;
 	}
 
+	.swiper-button-next,
+	.swiper-button-prev{
+		color:#FEC942 !important
+	}
+	
+		/* Cambia el color de todos los círculos */
+	.swiper-pagination-bullet {
+		background: #ffb700 !important;  /* El color que desees */
+	}
+
+	/* Cambia el color del círculo del slide activo */
+	.swiper-pagination-bullet-active {
+		background: #cd9300 !important;  /* El color que desees */
+	}
+
+	.custom-swiper{
+		bottom: 2rem;
+		height: 35vh;
+		margin-top: 5rem ;
+	}
+
 	.marginl{
 		margin-left: auto;
 	}
 
 	.marginr{
 		margin-right: auto;
+	}
+
+	.marginb{
+		margin-bottom: 2rem;
+	}
+
+	.marginb1{
+		margin-bottom: 3rem;
 	}
 
 	.miel{
@@ -371,6 +409,12 @@ body{
 
 	.center{
 		text-align: center;
+	}
+
+	.center1{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.input{

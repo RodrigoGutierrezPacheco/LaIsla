@@ -1,43 +1,18 @@
 import "./HomePage.css";
 import { Button } from "react-bootstrap";
-import { motion } from "framer-motion";
-import React,{Component} from 'react'
+import { motion,delay } from "framer-motion";
+import React, { Component, useEffect, useRef } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
 
 function HomePage() {
-
-	const handleDragStart = (e) => e.preventDefault();
-
-	const items = [
-		<div className='flex'>
-		<img className='imgResponsive' src="images/img1.jpg" onDragStart={handleDragStart} role="presentation" />
-		<h1 className='text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, voluptatum odio facere non debitis perspiciatis minima accusamus officiis sed distinctio tempora, facilis sunt ut aperiam aliquam mollitia! Vero, quisquam perspiciatis!</h1>
-		</div>,
-	
-		<div className='flex0'>
-		<img className='imgResponsive' src="images/img2.jpg" onDragStart={handleDragStart} role="presentation" />
-		<h1 className='text1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, voluptatum odio facere non debitis perspiciatis minima accusamus officiis sed distinctio tempora, facilis sunt ut aperiam aliquam mollitia! Vero, quisquam perspiciatis!</h1>
-		</div>,
-	
-		<div className='flex'>
-		<img className='imgResponsive' src="images/img1.jpg" onDragStart={handleDragStart} role="presentation" />
-		<h1 className='text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, voluptatum odio facere non debitis perspiciatis minima accusamus officiis sed distinctio tempora, facilis sunt ut aperiam aliquam mollitia! Vero, quisquam perspiciatis!</h1>
-		</div>,
-	
-		<div className='flex0'>
-		<img className='imgResponsive' src="images/img4.jpg" onDragStart={handleDragStart} role="presentation" />
-		<h1 className='text1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, voluptatum odio facere non debitis perspiciatis minima accusamus officiis sed distinctio tempora, facilis sunt ut aperiam aliquam mollitia! Vero, quisquam perspiciatis!</h1>
-		</div>,
-	
-		<div className='flex'>
-		<img className='imgResponsive' src="images/img1.jpg" onDragStart={handleDragStart} role="presentation" />
-		<h1 className='text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, voluptatum odio facere non debitis perspiciatis minima accusamus officiis sed distinctio tempora, facilis sunt ut aperiam aliquam mollitia! Vero, quisquam perspiciatis!</h1>
-		</div>,
-			
-	];
-	
 
 	function nosotros(){
 		window.location.href="/nosotros"
@@ -48,12 +23,37 @@ function HomePage() {
     <div>
 			<img className="logo1" src="images/logo3.png" alt="" />
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
-			<div>
-				<h1 className="title margint">!Bienvenido a nuestra pagina web¡ Espacio virtual dedicado a la venta de productos naturales cultivados de manera responsable y sostenible.</h1>
+			<div className="marginb">
+				<h1 className="title margint width marginl marginr marginb">!Bienvenido a nuestra pagina web¡ Espacio virtual dedicado a la venta de productos naturales cultivados de manera responsable y sostenible.</h1>
 			</div>
       <div>
-				<img className="png marginl marginr" src="images/planta.png" alt="" />
-				<p>Productos siempre frescos</p>
+		  <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={false}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 1000 }}
+          onSlideChange={() => console.log('slide change')}
+          className="custom-swiper"
+        >
+			<SwiperSlide >
+			  <img className="png marginl marginr" src="images/planta.png" alt="" />
+				<p className="subtitle margint">Productos siempre frescos</p>
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="png marginl marginr" src="images/planta.png" alt="" />
+				<p className="subtitle margint">Productos siempre frescos</p>
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="png marginl marginr" src="images/planta.png" alt="" />
+				<p className="subtitle margint">Productos siempre frescos</p>
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="png marginl marginr" src="images/planta.png" alt="" />
+				<p className="subtitle margint">Productos siempre frescos</p>
+			</SwiperSlide>
+    </Swiper>
 			</div>
 			<hr className="hr" />
 			<div>
