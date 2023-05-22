@@ -71,23 +71,25 @@ function HomePage() {
 				</div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
-					<h1 className="title1">Limon Natural</h1>
+					<h1 className="title1">Limón Natural</h1>
 					<p className="subtitle">$299.00 / 1 kilo</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">Agregar al Carrito</button>
 				</div>
-				<div className="boxProductos wrap">
+				<div className="column boxProductos">
+				<div className="row">
 					<div className="flex4 marginr marginl">
 						<img className="png1 marginl marginr" src="images/calidad.png" alt="" />
 						<h1 className="title">Excelente Calidad</h1>
 					</div>
-					<div className="flex4 marginr marginl">
-						<img className="png1 marginr marginl" src="images/envios.png" alt="" />
-						<h1 className="title">Envíos a toda la república</h1>
-					</div>
 					<div className="flex4 marginl marginr">
 						<img className="png1 marginl marginr " src="images/servicio.png" alt="" />
-						<h1 className="title">Servicio al Cliente</h1>
+						<h1 className="title2">Servicio al Cliente</h1>
+					</div>
+				</div>
+					<div className="flex41 center">
+						<img className="png1 marginr marginl" src="images/envios.png" alt="" />
+						<h1 className="title">Envíos a toda la república</h1>
 					</div>
 				</div>
 			</div>
@@ -101,16 +103,16 @@ function HomePage() {
 			<div className="productos">
 				<div>
 				<div className="boxProductos">
-					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
-					<h1 className="title1">Te de Limon</h1>
-					<p className="subtitle">El te de limon es muy bueno para la salud porque aporta diferentes beneficios.</p>
+					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
+					<h1 className="title1">Limón Natural</h1>
+					<p className="subtitle">$299.00 / 1 kilo</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">!Conoce mas¡</button>
+					<button className="buttonAgregar">Agregar al Carrito</button>
 				</div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
 					<h1 className="title1">Endulzar con Miel</h1>
-					<p className="subtitle">Endulzar tus bebidas y alimentos es mejor que usar azucar procecada.</p>
+					<p className="subtitle">Endulzar tus bebidas y alimentos es mejor que usar azúcar procesada.</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">¡Conoce mas!</button>
 				</div>
@@ -124,20 +126,20 @@ function HomePage() {
 				<h1 className="title marginr">Mayoreo</h1>
 			</div>
 			<div className="productos">
-				<h1 className="title">¿Buscas comprar productos a precio de mayoreo? !Los mejores ingreditnes que puedes tener en tu negocio¡</h1>
+				<h1 className="title">¿Buscas comprar productos a precio de mayoreo? !Los mejores ingredientes que puedes tener en tu negocio¡</h1>
 			<div className="contac">
 				<form className="start" action="">
-					<h1 className="title">Dejanos tus datos y nos pondremos en contacto contigo.</h1>
+					<h1 className="title">Déjanos tus datos y nos pondremos en contacto contigo.</h1>
 					<div>
 						<h1 className="title">Nombre</h1>
 						<input className="input" type="text" />
 					</div>
 					<div>
-						<h1 className="title">Correo Electronico</h1>
+						<h1 className="title">Correo Electrónico</h1>
 						<input type="text" className="input" />
 					</div>
 					<div>
-						<h1 className="title">Cuentanos que productos necesitas</h1>
+						<h1 className="title">Cuéntanos que productos necesitas</h1>
 						<input type="text" className="input cuentanos" />
 					</div>
 				</form>
@@ -155,9 +157,9 @@ function HomePage() {
 				<div>
 					<img src="images/img1.jpg" alt="" />
 				</div>
-				<h1 className="title">Somos una empresa dedicada al cultivo de miel, limones y demas productos 100% naturales dentro del estado de Guerrero.</h1>
+				<h1 className="title">Somos una empresa dedicada al cultivo de miel, limones y demás productos 100% naturales dentro del estado de Guerrero.</h1>
 				<img className="honeyCumb1 marginl marginr" src="images/honeyCumb.png" alt="" />
-				<h1 className="title">Todos nuestros productos se hacen con los mas altos estandares de calidad para que los puedas consumir en tu hogar dia con dia.</h1>
+				<h1 className="title">Todos nuestros productos se hacen con los mas altos estándares de calidad para que los puedas consumir en tu hogar dia con dia.</h1>
 			</div>
     </div>
   );

@@ -129,12 +129,20 @@ body{
 		margin-top: .5%;
 		font-weight: 700;
 		font-size: 2rem;
-		text-align: start;
+		text-align: center;
 	}
 
 	.title1{
 		font-size: 2rem;
 		font-weight: 700;
+	}
+	
+	.title2{
+		margin-top: .5%;
+		font-weight: 700;
+		font-size: 2rem;
+		text-align: center;
+		width: 28vw;
 	}
 
 	.subtitle{
@@ -191,7 +199,14 @@ body{
 	.flex4{
 		display: flex;
 		flex-direction: column;
-		width: 20vw;
+		justify-content: center;
+		width:30vw;
+	}
+
+	.flex41{
+		display: flex;
+		flex-direction: column;
+		width: 50vw;
 	}
 
 	.miel1{
@@ -332,6 +347,25 @@ body{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+
+	.boxProductos1{
+		background-color: white;
+		width: 80vw;
+		height: 60vh;
+		padding: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		box-shadow: 1.5rem 1.5rem rgba(60, 77, 47, 0.8);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.column{
+		display: flex;
+		flex-direction: column;
 	}
 
 	.son{
