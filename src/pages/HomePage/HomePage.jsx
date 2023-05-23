@@ -4,9 +4,11 @@ import { motion,delay } from "framer-motion";
 import React, { Component, useEffect, useRef } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import Swal from 'sweetalert2'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import emailjs from '@emailjs/browser';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -17,6 +19,23 @@ function HomePage() {
 	function nosotros(){
 		window.location.href="/nosotros"
 	}
+
+	const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_a3iwfaq","template_nq34ag7", form.current,"Q-9E7qPt5U-kBqC9P")
+      .then((result) => {
+				Swal.fire(
+					'Gracias por contactarnos!',
+					'En breve nos pondremos en contacto contigo al correo proporcionado!',
+					'success'
+				)
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
 
   return (
@@ -121,29 +140,31 @@ function HomePage() {
 			</div>
 			<hr className="hr" />
 			<div>
-			<div className="flex1">
-				<img className="honeyCumb1 marginl" src="images/honeyCumb.png" alt="" />
+			<div className="flex3 marginb">
 				<h1 className="title marginr">Mayoreo</h1>
+				<img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
 			</div>
+
 			<div className="productos">
-				<h1 className="title">¿Buscas comprar productos a precio de mayoreo? !Los mejores ingredientes que puedes tener en tu negocio¡</h1>
-			<div className="contac">
-				<form className="start" action="">
-					<h1 className="title">Déjanos tus datos y nos pondremos en contacto contigo.</h1>
-					<div>
-						<h1 className="title">Nombre</h1>
-						<input className="input" type="text" />
-					</div>
-					<div>
-						<h1 className="title">Correo Electrónico</h1>
-						<input type="text" className="input" />
-					</div>
-					<div>
-						<h1 className="title">Cuéntanos que productos necesitas</h1>
-						<input type="text" className="input cuentanos" />
-					</div>
-				</form>
-					<button className="enviar marginl marginr">Enviar</button>
+				<h1 className="title3">¿Buscas comprar productos a precio de mayoreo? !Los mejores ingredientes que puedes tener en tu negocio¡</h1>
+			<div className="contac marginb">
+				<h1 className="title w-2/3 marginr marginl start marginb pt">Déjanos tus datos y nos pondremos en contacto contigo.</h1>
+			<form ref={form} onSubmit={sendEmail} className="form marginl marginr w-3/4">
+				<div className="label">
+      		<label className="subtitle">Nombre</label>
+      		<input className="input" type="text" name="user_name" required/>
+				</div>
+				<div className="label">
+      		<label className="subtitle">Correo Electrónico</label>
+      		<input className="input" type="email" name="user_email" id="email" required/>
+				</div>
+				<div className="label">
+      		<label className="subtitle">Cuanto necesitas?</label>
+      		<textarea className="input" name="message" required/>
+				</div>
+      <input className="buttonEnviar marginb" type="submit" value="Enviar" />
+    </form>
+
 			</div>
 			</div>
 			<img className="mayoreoImg marginl marginr" src="images/mayoreo.jpg" alt="" />
