@@ -96,18 +96,18 @@ function HomePage() {
 			</div>
 			<hr className="hr" />
 			<div>
-				<div className="flex2">
-					<img src="images/honeyCumb.png" alt="" className="honeyCumb1 marginl" />
-					<h1 className="title marginr">Recetas</h1>
-				</div>
+			<div className="flex3 marginb">
+				<h1 className="title marginr">Recetas</h1>
+				<img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+			</div>
 			<div className="productos">
 				<div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
-					<h1 className="title1">Limón Natural</h1>
-					<p className="subtitle">$299.00 / 1 kilo</p>
+					<h1 className="title1">Te de Limón</h1>
+					<p className="subtitle">El te de limón es muy bueno para la salud, ya que aporta diferentes beneficios.</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">Agregar al Carrito</button>
+					<button className="buttonAgregar">¡Conoce Mas!</button>
 				</div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
