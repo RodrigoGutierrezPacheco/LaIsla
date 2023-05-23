@@ -330,10 +330,10 @@ body{
 
 
 	.hr{
-		background-color:rgba(255, 211, 91, 200%) ;
+		background-color:#FFD361 ;
 		height: .5vh;
 		border: none;
-		width: 95%;
+		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 1rem;
@@ -477,8 +477,6 @@ body{
 	.footer{
 	}
 
-	.mayoreoImg{
-	}
 
 	.pagos{
 		background-color: #FFD361;
@@ -531,6 +529,13 @@ body{
 	.input{
 		border: 2px solid black;
 		width: 80%;
+	}
+
+	.input1{
+		border: 2px solid black;
+		border-radius: .5rem;
+		width: 100%;
+		height: 10rem;
 	}
 
 	.enviar{

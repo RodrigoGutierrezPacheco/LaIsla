@@ -160,7 +160,7 @@ function HomePage() {
 				</div>
 				<div className="label">
       		<label className="subtitle">Cuanto necesitas?</label>
-      		<textarea className="input" name="message" required/>
+      		<textarea className="input1 marginb" name="message" required/>
 				</div>
       <input className="buttonEnviar marginb" type="submit" value="Enviar" />
     </form>
