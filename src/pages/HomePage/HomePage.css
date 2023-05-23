@@ -16,6 +16,11 @@ body{
 		margin-right: auto;
 	}
 
+	.imgNosotros{
+		width: 90vw;
+		height: 100vh;
+	}
+
 	.center{
 		margin-left: auto;
 		margin-right: auto;
@@ -262,6 +267,16 @@ body{
 		margin-bottom: 2rem;
 	}
 
+	.mb1{
+		margin-bottom: 5rem;
+	}
+
+	.swiper-pagination-bullet{
+		width: 1rem !important;
+		height: 1rem !important;
+		margin-right: 1rem !important;
+	}
+
 	.dejanos{
 		width: 90vw;
 		text-align: center;
@@ -298,6 +313,12 @@ body{
 		bottom: 2rem;
 		height: 35vh;
 		margin-top: 5rem ;
+	}
+
+
+	.custom-swiper1{
+		height: 100%;
+		margin-top: 2rem ;
 	}
 
 	.marginl{
@@ -474,8 +495,6 @@ body{
 		margin-top: 1rem;
 	}
 
-	.footer{
-	}
 
 
 	.pagos{
@@ -576,10 +595,6 @@ body{
 		color: grey;
 	}
 
-	.redes{
-		width: 30%;
-		opacity: .5;
-	}
 
 	.redesFlex{
 		display: flex;
@@ -599,7 +614,6 @@ body{
 
 	.contact{
 		width: 25%;
-		opacity: .5;
 	}
 
 	.margint{
