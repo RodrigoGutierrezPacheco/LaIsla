@@ -148,6 +148,11 @@ body{
 	.subtitle{
 		font-weight: 600;
 		font-size: 1.2rem;
+	}
+
+	.subtitle1{
+		font-weight: 600;
+		font-size: 1.2rem;
 		text-align: start;
 	}
 

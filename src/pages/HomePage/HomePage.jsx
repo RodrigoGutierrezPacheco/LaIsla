@@ -105,14 +105,14 @@ function HomePage() {
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
 					<h1 className="title1">Te de Limón</h1>
-					<p className="subtitle">El te de limón es muy bueno para la salud, ya que aporta diferentes beneficios.</p>
+					<p className="subtitle1">El te de limón es muy bueno para la salud, ya que aporta diferentes beneficios.</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">¡Conoce Mas!</button>
 				</div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
 					<h1 className="title1">Endulzar con Miel</h1>
-					<p className="subtitle">Endulzar tus bebidas y alimentos es mejor que usar azúcar procesada.</p>
+					<p className="subtitle1">Endulzar tus bebidas y alimentos es mejor que usar azúcar procesada.</p>
 					<hr className="hr" />
 					<button className="buttonAgregar">¡Conoce mas!</button>
 				</div>
