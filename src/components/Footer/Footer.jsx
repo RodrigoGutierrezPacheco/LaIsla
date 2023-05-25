@@ -9,7 +9,8 @@ const Footer = () => {
 	</div>
 	<div className="box">
 		<h1 className="title start">Pagos</h1>
-		<h2 className="start grey">Aceptamos pagos con Paypal, depósitos, transferencias.</h2>
+		<h2 className="start font-semibold
+		">Aceptamos pagos con Paypal, depósitos, transferencias.</h2>
 	</div>
 </div>
 <div className="flex envios">
@@ -18,7 +19,7 @@ const Footer = () => {
 	</div>
 	<div className="box">
 		<h1 className="title start">Envíos</h1>
-		<h2 className="start grey">Envió seguro con diferentes paqueterías.</h2>
+		<h2 className="start font-semibold">Envió seguro con diferentes paqueterías.</h2>
 	</div>
 </div>
 <div className="flex entregas">
@@ -27,7 +28,7 @@ const Footer = () => {
 	</div>
 	<div className="box">
 		<h1 className="title start">Entregas</h1>
-		<h2 className="start grey">Contactanos para ver la mejor opción de tu entrega.</h2>
+		<h2 className="start font-semibold">Contactanos para ver la mejor opción de tu entrega.</h2>
 	</div>
 </div>
 <div className="flex isla">
@@ -36,11 +37,11 @@ const Footer = () => {
 	</div>
 	<div className="box">
 		<h1 className="title start">La Isla</h1>
-		<h2 className="start grey"> Síguenos en nuestras diferentes redes sociales.</h2>
+		<h2 className="start font-semibold"> Síguenos en nuestras diferentes redes sociales.</h2>
 		<div className="redesFlex">
-		 <img className="redes" src="images/fb.png" alt="" />
-		 <img className="redes" src="images/instagram.png" alt="" />
-		 <img className="redes" src="images/tiktok.png" alt="" />
+		 <img className="contact" src="images/fb.png" alt="" />
+		 <img className="contact" src="images/instagram.png" alt="" />
+		 <img className="contact" src="images/tiktok.png" alt="" />
 		</div>
 	</div>
 </div>
@@ -48,9 +49,9 @@ const Footer = () => {
 	<div>
 		<img className="icon" src="images/contacto.png" alt="" />
 	</div>
-	<div className="box">
+	<div className="box marginb">
 		<h1  className="title start">Contacto</h1>
-		<h2 className="start grey">Whatsapp, Teléfono, Correo Electrónico.</h2>
+		<h2 className="start font-semibold">Whatsapp, Teléfono, Correo Electrónico.</h2>
 		<div className="redesFlex1">
 			<img className="contact" src="images/whatsapp.png" alt="" />
 			<img className="contact" src="images/telefono.png" alt="" />
@@ -58,7 +59,7 @@ const Footer = () => {
 		</div>
 	</div>
 </div>
-	<h1 className="footer1 grey">Agropecuaria La Isla 2023 </h1>
+	<h1 className="footer1 font-extrabold">Agropecuaria La Isla 2023 </h1>
 </div>
 	)
 }

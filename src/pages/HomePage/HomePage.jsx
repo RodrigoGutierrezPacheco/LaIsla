@@ -53,7 +53,6 @@ function HomePage() {
           navigation={false}
           pagination={{ clickable: true }}
           autoplay={{ delay: 1000 }}
-          onSlideChange={() => console.log('slide change')}
           className="custom-swiper"
         >
 			<SwiperSlide >
@@ -171,16 +170,37 @@ function HomePage() {
 			</div>
 			<hr className="hr" />
 			<div>
-				<div className="flex1">
-					<img src="images/honeyCumb.png" alt="" className="honeyCumb1 marginl" />
-					<h1 className="title marginr">Nosotros</h1>
-				</div>
+			<div className="flex3 marginb">
+				<h1 className="title marginr">Nosotros</h1>
+				<img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+			</div>
 				<div>
-					<img src="images/img1.jpg" alt="" />
+				<Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={false}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 1000 }}
+          className="custom-swiper1 mb"
+        >
+			<SwiperSlide >
+			  <img className="imgNosotros marginl marginr mb1" src="images/img1.jpg" alt="" />
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="imgNosotros marginl marginr" src="images/img2.jpg" alt="" />
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="imgNosotros marginl marginr" src="images/img3.jpg" alt="" />
+			</SwiperSlide>
+			<SwiperSlide>
+			  <img className="imgNosotros marginl marginr" src="images/img4.jpg" alt="" />
+			</SwiperSlide>
+    </Swiper>
 				</div>
-				<h1 className="title">Somos una empresa dedicada al cultivo de miel, limones y demás productos 100% naturales dentro del estado de Guerrero.</h1>
-				<img className="honeyCumb1 marginl marginr" src="images/honeyCumb.png" alt="" />
-				<h1 className="title">Todos nuestros productos se hacen con los mas altos estándares de calidad para que los puedas consumir en tu hogar dia con dia.</h1>
+				<h1 className="title w-2/3 marginl marginr marginb">Somos una empresa dedicada al cultivo de miel, limones y demás productos 100% naturales dentro del estado de Guerrero.</h1>
+				<img className="honeyCumb1 marginl marginr margint marginb" src="images/honeyCumb1.png" alt="" />
+				<h1 className="title w-2/3 marginr marginl marginb">Todos nuestros productos se hacen con los mas altos estándares de calidad para que los puedas consumir en tu hogar dia con dia.</h1>
 			</div>
     </div>
   );
