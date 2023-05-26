@@ -8,7 +8,9 @@ import Swal from 'sweetalert2'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import emailjs from '@emailjs/browser';
+
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -37,6 +39,12 @@ function HomePage() {
       });
   };
 
+	// var swiper = new Swiper('.swiper-container'),{
+	// 	slidesPerView : true,
+	// }
+
+	SwiperCore.use([Autoplay]);
+
 
   return (
     <div>
@@ -46,30 +54,53 @@ function HomePage() {
 				<h1 className="title margint width marginl marginr marginb">!Bienvenido a nuestra pagina web¡ Espacio virtual dedicado a la venta de productos naturales cultivados de manera responsable y sostenible.</h1>
 			</div>
       <div>
+				{/* <div className="swiper-container">
+					<div className="swiper-wrapper">
+						<div className="swiper-slide">
+							<img className="png marginl marginr" src="images/planta.png" alt="" />
+							<p className="subtitle margint">Productos siempre frescos</p>
+						</div>
+						<div className="swiper-slide">
+							<img className="png marginl marginr" src="images/planta.png" alt="" />
+							<p className="subtitle margint">Productos siempre frescos</p>
+						</div>
+						<div className="swiper-slide">
+							<img className="png marginl marginr" src="images/planta.png" alt="" />
+							<p className="subtitle margint">Productos siempre frescos</p>
+						</div>
+						<div className="swiper-slide">
+							<img className="png marginl marginr" src="images/planta.png" alt="" />
+							<p className="subtitle margint">Productos siempre frescos</p>
+						</div>
+					</div>
+				</div> */}
 		  <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           navigation={false}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ 
+						delay: 2000,
+						disableOnInteraction:false,
+					 }}
           className="custom-swiper"
         >
 			<SwiperSlide >
 			  <img className="png marginl marginr" src="images/planta.png" alt="" />
-				<p className="subtitle margint">Productos siempre frescos</p>
+				<p className="subtitle margint">Productos siempre frescos.</p>
 			</SwiperSlide>
 			<SwiperSlide>
-			  <img className="png marginl marginr" src="images/planta.png" alt="" />
-				<p className="subtitle margint">Productos siempre frescos</p>
+			  <img className="png marginl marginr" src="images/naturalesa.png" alt="" />
+				<p className="subtitle margint">Mejor alternativa para el planeta.</p>
 			</SwiperSlide>
 			<SwiperSlide>
-			  <img className="png marginl marginr" src="images/planta.png" alt="" />
-				<p className="subtitle margint">Productos siempre frescos</p>
+			  <img className="png marginl marginr" src="images/naturaleza2.png" alt="" />
+				<p className="subtitle margint">Cultivados por Profesionales en el campo.</p>
 			</SwiperSlide>
 			<SwiperSlide>
-			  <img className="png marginl marginr" src="images/planta.png" alt="" />
-				<p className="subtitle margint">Productos siempre frescos</p>
+			  <img className="png marginl marginr" src="images/naturaleza3.png" alt="" />
+				<p className="subtitle margint">Expertos en el campo de la Apicultura.</p>
 			</SwiperSlide>
     </Swiper>
 			</div>
@@ -181,7 +212,10 @@ function HomePage() {
           slidesPerView={1}
           navigation={false}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ 
+						delay: 2000,
+						disableOnInteraction:false,
+					}}
           className="custom-swiper1 mb"
         >
 			<SwiperSlide >

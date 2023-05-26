@@ -20,7 +20,7 @@ function Navbar() {
 			bottom: 'auto',
 			marginRight: '-50%',
 			transform: 'translate(-50%, -50%)',
-			backgroundColor:"#efeae3"
+			backgroundColor:"white"
 		},
 	};
 
@@ -60,7 +60,7 @@ function Navbar() {
       >
 				  <motion.img whileTap={{scale:1.2}} onClick={closeModal} className="x" src="images/x.png" alt="" />
 				  <motion.h1 className="textoMenu center">Menu</motion.h1>
-					<motion.img onClick={home} whileTap={{scale:1.1}} className="logo3" src="images/logo1.png" alt="" />
+					<motion.img onClick={home} whileTap={{scale:1.1}} className="logo3" src="images/logo3.png" alt="" />
 				<div>
 			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Productos</motion.h1>
 			   <motion.h1 whileTap={{scale:1.2}} className="textoMenu">Pedidos</motion.h1>
