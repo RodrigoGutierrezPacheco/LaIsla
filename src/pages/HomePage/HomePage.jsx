@@ -1,7 +1,8 @@
 import "./HomePage.css";
 import { Button } from "react-bootstrap";
 import { motion,delay } from "framer-motion";
-import React, { Component, useEffect, useRef } from 'react';
+import React, { Component, useEffect, useRef, useState } from 'react';
+import { Link } from "react-router-dom";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Swal from 'sweetalert2'
@@ -10,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import SwiperCore, { Autoplay } from 'swiper';
 import emailjs from '@emailjs/browser';
+import { Modal } from "react-bootstrap";
 
 
 // Import Swiper styles
@@ -39,41 +41,63 @@ function HomePage() {
       });
   };
 
-	// var swiper = new Swiper('.swiper-container'),{
-	// 	slidesPerView : true,
-	// }
 
 	SwiperCore.use([Autoplay]);
 
+	function agregarMiel(miel){
+		console.log("Miel Agregada")
+		const li = document
+	}
 
+	function agregarLimon(){
+		console.log("Limon Agregado")
+	}
+
+	const [cartModalIsOpen, setCartModalIsOpen] = React.useState(false);
+	const [menuModalIsOpen, setMenuModalIsOpen] = React.useState(false);
+
+// Definición de las funciones para abrir y cerrar el modal del carrito
+function openCartModal() {
+  setCartModalIsOpen(true);
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCartModal() {
+  setCartModalIsOpen(false);
+  document.body.style.overflow = 'auto';
+}
+
+// Asignación del controlador de eventos al botón de carrito
+useEffect(() => {
+  const botonCarrito = document.getElementById('carrito');
+  if (botonCarrito) {
+    botonCarrito.addEventListener('click', openCartModal);
+  }
+}, []);
+	
+	const carrito = [];
   return (
     <div>
-			<img className="logo1" src="images/logo3.png" alt="" />
+		 <motion.img whileTap={{ scale: 1.2 }} className="carrito" id="carrito" src="images/carrito.png" onClick={openCartModal} />
+		 <Modal 
+		 	show={cartModalIsOpen} 
+			onHide={closeCartModal} 
+			contentLabel="Cart Modal"
+		>
+    	<motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
+      <motion.h1 className="textoMenu center">Carrito</motion.h1>
+      <motion.img whileTap={{ scale: 1.1 }} className="logo3 marginr marginl" src="images/logo3.png" alt="" />
+  		<img className="honeyCumb1 marginl marginr margint marginb" src="images/honeyCumb.png" alt="" />
+ 		 {carrito.length === 0 ? (
+    		<h1 className="title">Aun no tienes productos agregados</h1>
+ 		 ) : null}
+    </Modal>
+			<img className="logo1 marginr marginl" src="images/logo3.png" alt="" />
 			<img className="honeyCumb" src="images/honeyCumb.png" alt="" />
 			<div className="marginb">
 				<h1 className="title margint width marginl marginr marginb">!Bienvenido a nuestra pagina web¡ Espacio virtual dedicado a la venta de productos naturales cultivados de manera responsable y sostenible.</h1>
 			</div>
       <div>
-				{/* <div className="swiper-container">
-					<div className="swiper-wrapper">
-						<div className="swiper-slide">
-							<img className="png marginl marginr" src="images/planta.png" alt="" />
-							<p className="subtitle margint">Productos siempre frescos</p>
-						</div>
-						<div className="swiper-slide">
-							<img className="png marginl marginr" src="images/planta.png" alt="" />
-							<p className="subtitle margint">Productos siempre frescos</p>
-						</div>
-						<div className="swiper-slide">
-							<img className="png marginl marginr" src="images/planta.png" alt="" />
-							<p className="subtitle margint">Productos siempre frescos</p>
-						</div>
-						<div className="swiper-slide">
-							<img className="png marginl marginr" src="images/planta.png" alt="" />
-							<p className="subtitle margint">Productos siempre frescos</p>
-						</div>
-					</div>
-				</div> */}
 		  <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -116,14 +140,14 @@ function HomePage() {
 					<h1 className="title1">Miel Natural</h1>
 					<p className="subtitle">$299.00 / 1 Litro</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">Agregar al Carrito</button>
+					<button className="buttonAgregar" onClick={agregarMiel}>Agregar al Carrito</button>
 				</div>
 				<div className="boxProductos">
 					<img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
 					<h1 className="title1">Limón Natural</h1>
 					<p className="subtitle">$299.00 / 1 kilo</p>
 					<hr className="hr" />
-					<button className="buttonAgregar">Agregar al Carrito</button>
+					<button className="buttonAgregar" onClick={agregarLimon}>Agregar al Carrito</button>
 				</div>
 				<div className="column boxProductos">
 				<div className="row">
