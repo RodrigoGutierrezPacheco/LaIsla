@@ -31,7 +31,7 @@ function Navbar() {
         <motion.img whileTap={{ scale: 1.2 }} className="logo2" src="images/logo2.png" alt="" />
         <motion.h1 whileTap={{ scale: 1.2 }} className="laIsla">La Isla</motion.h1>
         <div className="menu1 flex0">
-          <motion.img whileTap={{ scale: 1.2 }} onClick={openCartModal} className="menu" src="images/menu.png" alt="" />
+          <motion.img  onClick={openCartModal} className="menu" src="images/menu.png" alt="" />
         </div>
 		 <Modal 
 		 	show={cartModalIsOpen} 
