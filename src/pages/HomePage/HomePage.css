@@ -135,9 +135,12 @@ body{
 		bottom: 2rem;
 		right: 1rem;
 		z-index: 9999;
-		background-color:#FFD361;
-		padding: .6rem;
+		background-color:#000000;
+		padding: .8rem;
 		border-radius: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.carrito-length{
@@ -185,7 +188,7 @@ body{
 
 	.title{
 		margin-top: .5%;
-		font-weight: 700;
+		font-weight: 900;
 		font-size: 2rem;
 		text-align: center;
 	}
@@ -222,6 +225,47 @@ body{
 	.subtitle{
 		font-weight: 600;
 		font-size: 1.2rem;
+	}
+
+	.png-carrito{
+		width: 2rem;
+	}
+
+	.mas-menos{
+		width: 1rem;
+	}
+
+	.eliminar{
+		background-color: #ff0000;
+		color: white;
+	}
+
+	.button-pagar{
+		background-color: black;
+		color: white;
+		width: 15rem;
+		font-size: 2rem;
+		font-weight: 900;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		}
+
+	.cantidad-carrito{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.total{
+		font-weight: 900;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
 	}
 
 	.subtitle1{

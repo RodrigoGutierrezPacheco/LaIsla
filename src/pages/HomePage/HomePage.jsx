@@ -20,7 +20,7 @@ function HomePage() {
   const [carrito, setCarrito] = useState([]);
   const [bodyOverflow, setBodyOverflow] = useState('auto');
 
-  const agregarProducto = (nombre, precio) => {
+  const agregarProducto = (nombre, precio,png) => {
     const productoExistente = carrito.find((producto) => producto.nombre === nombre);
 
     if (productoExistente) {
@@ -31,6 +31,7 @@ function HomePage() {
       const productoNuevo = {
         nombre: nombre,
         precioUnitario: precio,
+				png:png,
         cantidad: 1,
         precio: precio
       };
@@ -40,13 +41,29 @@ function HomePage() {
 
   const agregarMiel = (event) => {
     event.preventDefault();
-    agregarProducto("Miel Natural", 299);
-  };
+    agregarProducto("Miel Natural", 299,"miel");
+		Swal.fire({
+			icon: 'success',
+			title: 'Miel Agregada',
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 1500
+		});
+	};
 
   const agregarLimon = (event) => {
     event.preventDefault();
-    agregarProducto("Limón Natural", 199);
-  };
+    agregarProducto("Limón Natural", 199,"limon");
+		Swal.fire({
+			icon: 'success',
+			title: 'Limón Agregado',
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 1500
+		});
+	};
 
   function nosotros() {
     window.location.href = "/nosotros";
@@ -90,6 +107,30 @@ function HomePage() {
     }
   }, []);
 
+	const totalAPagar = carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0);
+
+	
+  const aumentarCantidad = (index,producto) => {
+    const newCarrito = [...carrito];
+    newCarrito[index].cantidad++;
+    setCarrito(newCarrito);
+  };
+
+	const disminuirCantidad = (index) => {
+    const newCarrito = [...carrito];
+    if (newCarrito[index].cantidad > 1) {
+      newCarrito[index].cantidad--;
+      setCarrito(newCarrito);
+    }
+  };
+
+	const eliminarProducto = (index) => {
+    const newCarrito = [...carrito];
+    newCarrito.splice(index, 1);
+    setCarrito(newCarrito);
+  };
+
+
   return (
     <div>
 			<div>
@@ -103,26 +144,31 @@ function HomePage() {
         style={{ overflow: bodyOverflow }}
       >
         <motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
-        <motion.h1 className="textoMenu center">Carrito</motion.h1>
         <motion.img whileTap={{ scale: 1.1 }} className="logo3 marginr marginl" src="images/logo3.png" alt="" />
         <img className="honeyCumb1 marginl marginr margint marginb" src="images/honeyCumb.png" alt="" />
+        <motion.h1 className="textoMenu center">Carrito de compras</motion.h1>
         {carrito.length === 0 ? (
           <h1 className="title">Aún no tienes productos agregados</h1>
         ) : (
           <div>
-            <ul className="flex">
+            <ul className="flex row">
               {carrito.map((producto, index) => (
                 <li key={index}>
-                  <p>{producto.nombre}</p>
-									<div className="flex-reverse">
-										<h1>+</h1>
-                  	<p>Cantidad: {producto.cantidad}</p>
-										<h1>-</h1>
+									<div className="cantidad-carrito">
+										<img onClick={() => aumentarCantidad(index)} src="images/mas.png" alt="" className="mas-menos" />
+										<img className="png-carrito" src={`images/${producto.png}.png`} alt="" />
+										<h1>{`x${producto.cantidad}`}</h1>
+										<img onClick={() => disminuirCantidad(index)} src="images/menos.png" alt="" className="mas-menos" />
+										<p>{producto.nombre}</p>
+                  <p>Precio: {producto.precio * producto.cantidad}</p>
+									<img onClick={() => eliminarProducto(index)} src="images/eliminar.png" alt="" className="mas-menos" />
 									</div>
-                  <p>Precio: {producto.precio}</p>
+									<hr className="hr" />
                 </li>
               ))}
             </ul>
+							<p className="total">Total: ${totalAPagar}</p>
+							<button className="button-pagar">Pagar</button>
           </div>
         )}
       </Modal>
