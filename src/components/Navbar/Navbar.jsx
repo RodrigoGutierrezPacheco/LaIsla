@@ -15,11 +15,17 @@ function Navbar() {
 
   function openCartModal() {
     setCartModalIsOpen(true);
+		const modal = document.querySelector('.modal');
+		modal.classList.add('animate__animated', 'animate__fadeIn');
   }
 
   function closeCartModal() {
-    setCartModalIsOpen(false);
-  }
+		const modal = document.querySelector('.modal');
+    modal.classList.add('animate__animated', 'animate__fadeOut');
+    setTimeout(() => {
+      setCartModalIsOpen(false);
+    }, 500); // Ajusta el tiempo según la duración de la animación en milisegundos  
+	}
 
   function home() {
     window.location.href = "/";

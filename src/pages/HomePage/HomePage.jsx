@@ -107,8 +107,11 @@ function HomePage() {
   }
 
   function closeCartModal() {
-    setCartModalIsOpen(false);
-    setBodyOverflow('auto');
+		const modal = document.querySelector('.modal');
+		modal.classList.add('animate__animated', 'animate__fadeOut');
+    setTimeout(() => {
+      setCartModalIsOpen(false);
+    }, 500); // Ajusta el tiempo según la duración de la animación en milisegundos  
   }
 
   useEffect(() => {
@@ -158,7 +161,7 @@ function HomePage() {
         show={cartModalIsOpen}
         onHide={closeCartModal}
         contentLabel="Cart Modal"
-        style={{ overflow: bodyOverflow }}
+        style={{ overflow: bodyOverflow }} 
 				className="animate__animated animate__bounceInUp"
 				>
         <motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
