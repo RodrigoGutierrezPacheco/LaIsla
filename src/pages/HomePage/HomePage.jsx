@@ -162,7 +162,7 @@ function HomePage() {
         onHide={closeCartModal}
         contentLabel="Cart Modal"
         style={{ overflow: bodyOverflow }} 
-				className="animate__animated animate__bounceInUp"
+				className="animate__animated animate__backInRight"
 				>
         <motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
         <motion.img whileTap={{ scale: 1.1 }} className="logo3 marginr marginl" src="images/logo3.png" alt="" />
