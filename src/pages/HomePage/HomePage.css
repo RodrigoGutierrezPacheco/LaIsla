@@ -118,7 +118,8 @@ body{
 	}
 
 	.modal-content{
-		width: 90vw;
+		width: 99vw;
+		height: 100%;
 		padding: 1rem;
 		position: fixed;
 		top: 50%; /* Centra verticalmente */
