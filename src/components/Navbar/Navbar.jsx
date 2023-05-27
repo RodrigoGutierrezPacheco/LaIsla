@@ -37,6 +37,7 @@ function Navbar() {
 		 	show={cartModalIsOpen} 
 			onHide={closeCartModal} 
 			contentLabel="Cart Modal"
+			className="animate__animated animate__backInRight"
 		>
     	<motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
       <motion.h1 className="textoMenu center">Menu</motion.h1>

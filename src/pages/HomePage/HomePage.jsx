@@ -11,6 +11,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import SwiperCore, { Autoplay } from 'swiper';
 import emailjs from '@emailjs/browser';
 import { Modal } from "react-bootstrap";
+import 'animate.css';
 
 
 import 'swiper/swiper-bundle.css';
@@ -19,6 +20,16 @@ import 'swiper/swiper-bundle.min.css';
 function HomePage() {
   const [carrito, setCarrito] = useState([]);
   const [bodyOverflow, setBodyOverflow] = useState('auto');
+
+	const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const modalAnimation = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
 
   const agregarProducto = (nombre, precio,png) => {
     const productoExistente = carrito.find((producto) => producto.nombre === nombre);
@@ -137,23 +148,30 @@ function HomePage() {
       <motion.img whileTap={{ scale: 1.2 }} className="carrito" id="carrito" src="images/carrito.png" onClick={openCartModal} />
 			<h1 className="carrito-length">{carrito.reduce((total, producto) => total + producto.cantidad, 0)}</h1>
 			</div>
+			<motion.div
+				initial="hidden"
+				animate={show ? "visible" : "hidden"}
+				variants={modalAnimation}
+			>
+
       <Modal
         show={cartModalIsOpen}
         onHide={closeCartModal}
         contentLabel="Cart Modal"
         style={{ overflow: bodyOverflow }}
-      >
+				className="animate__animated animate__bounceInUp"
+				>
         <motion.img whileTap={{ scale: 1.2 }} onClick={closeCartModal} className="x" src="images/x.png" alt="" />
         <motion.img whileTap={{ scale: 1.1 }} className="logo3 marginr marginl" src="images/logo3.png" alt="" />
         <img className="honeyCumb1 marginl marginr margint marginb" src="images/honeyCumb.png" alt="" />
         <motion.h1 className="textoMenu center">Carrito de compras</motion.h1>
         {carrito.length === 0 ? (
-          <h1 className="title">Aún no tienes productos agregados</h1>
-        ) : (
-          <div>
+					<h1 className="title">Aún no tienes productos agregados</h1>
+					) : (
+						<div>
             <ul className="flex row">
               {carrito.map((producto, index) => (
-                <li key={index}>
+								<li key={index}>
 									<div className="cantidad-carrito">
 										<img onClick={() => aumentarCantidad(index)} src="images/mas.png" alt="" className="mas-menos" />
 										<img className="png-carrito" src={`images/${producto.png}.png`} alt="" />
@@ -172,6 +190,7 @@ function HomePage() {
           </div>
         )}
       </Modal>
+				</motion.div>
       <img className="logo1 marginr marginl" src="images/logo3.png" alt="" />
       <img className="honeyCumb" src="images/honeyCumb.png" alt="" />
       <div className="marginb">
