@@ -1,6 +1,6 @@
 import "./HomePage.css";
 import { Button } from "react-bootstrap";
-import { motion, delay } from "framer-motion";
+import { motion, delay, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import AliceCarousel from 'react-alice-carousel';
@@ -19,6 +19,41 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/swiper-bundle.min.css';
 
 function HomePage() {
+	const logoVariants = {
+    rotate: {
+      rotate: [0, 360],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: 'loop',
+      },
+    },
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      rotateLogo();
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  const rotateLogo = () => {
+    return (
+      <motion.img
+        className="logo"
+        src="images/logo.png"
+        alt="Logo"
+        variants={logoVariants}
+        initial="rotate"
+        animate="rotate"
+      />
+    );
+  };
+
+
 	const sectionRef = useRef(null);
   const [carrito, setCarrito] = useState([]);
   const [bodyOverflow, setBodyOverflow] = useState('auto');
@@ -259,15 +294,13 @@ function HomePage() {
     );
   }}
 />
-
-						{/* aqui va el boton para pago con paypal */}
           </div>
         )}
       </Modal>
 			</PayPalScriptProvider>
 				</motion.div>
       <img className="logo1 marginr marginl" src="images/logo3.png" alt="" />
-      <img className="honeyCumb" src="images/honeyCumb.png" alt="" />
+      <motion.img variants={logoVariants} animate="rotate" className="honeyCumb marginl marginr margint" src="images/honeyCumb.png" alt="" />
       <div className="marginb">
         <h1 className="title margint width marginl marginr marginb">¡Bienvenido a nuestra página web! Espacio virtual dedicado a la venta de productos naturales cultivados de manera responsable y sostenible.</h1>
       </div>
@@ -304,9 +337,9 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div className="flex3 marginb">
-          <h1 className="title marginr">Nuestros Productos</h1>
-          <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+			<div ref={sectionRef} className=" width flex3 marginb">
+          <h1 id="productos" className="title">Nuestros productos</h1>
+					<motion.img variants={logoVariants} animate="rotate" className="honeyCumb marginr marginl" src="images/honeyCumb.png" alt="" />
         </div>
         <div id="productos" className="productos">
           <div className="boxProductos">
@@ -343,9 +376,9 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div className="flex3 marginb">
-          <h1 className="title marginr">Recetas</h1>
-          <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+			<div ref={sectionRef} className=" width flex3 marginb">
+          <h1 id="recetas" className="title marginr">Recetas</h1>
+					<motion.img variants={logoVariants} animate="rotate" className="honeyCumb marginr marginl" src="images/honeyCumb.png" alt="" />
         </div>
         <div className="productos">
           <div>
@@ -368,9 +401,9 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div className="flex3 marginb">
+			<div ref={sectionRef} className=" width flex3 marginb">
           <h1 id="mayoreo" className="title marginr">Mayoreo</h1>
-          <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+					<motion.img variants={logoVariants} animate="rotate" className="honeyCumb marginr marginl" src="images/honeyCumb.png" alt="" />
         </div>
         <div className="productos">
           <h1 className="title3">¿Buscas comprar productos a precio de mayoreo? ¡Los mejores ingredientes que puedes tener en tu negocio!</h1>
@@ -397,9 +430,9 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div ref={sectionRef} className="flex3 marginb">
+        <div ref={sectionRef} className=" width flex3 marginb">
           <h1 id="nosotros" className="title marginr">Nosotros</h1>
-          <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
+					<motion.img variants={logoVariants} animate="rotate" className="honeyCumb marginr marginl" src="images/honeyCumb.png" alt="" />
         </div>
         <div>
           <Swiper
