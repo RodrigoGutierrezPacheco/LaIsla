@@ -83,9 +83,11 @@ function Navbar() {
           <motion.h1 onClick={handleNosotrosClick} whileTap={{ scale: 1.1 }} className="title start">
             Nosotros
           </motion.h1>
+					<hr className="hr" />
           <motion.h1 onClick={handleProductosClick} whileTap={{ scale: 1.1 }} className="title start">
             Productos
           </motion.h1>
+					<hr className="hr" />
 					<motion.h1 onClick={handleMayoreoClick} whileTap={{ scale: 1.1 }} className="title start">
             Mayoreo
           </motion.h1>
