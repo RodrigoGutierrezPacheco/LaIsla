@@ -19,6 +19,7 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/swiper-bundle.min.css';
 
 function HomePage() {
+	const sectionRef = useRef(null);
   const [carrito, setCarrito] = useState([]);
   const [bodyOverflow, setBodyOverflow] = useState('auto');
 
@@ -78,7 +79,7 @@ function HomePage() {
 	};
 
   function nosotros() {
-    window.location.href = "/nosotros";
+    window.location.href = "#nosotros";
   }
 
   const form = useRef();
@@ -307,7 +308,7 @@ function HomePage() {
           <h1 className="title marginr">Nuestros Productos</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
-        <div className="productos">
+        <div id="productos" className="productos">
           <div className="boxProductos">
             <img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
             <h1 className="title1">Miel Natural</h1>
@@ -368,7 +369,7 @@ function HomePage() {
       <hr className="hr" />
       <div>
         <div className="flex3 marginb">
-          <h1 className="title marginr">Mayoreo</h1>
+          <h1 id="mayoreo" className="title marginr">Mayoreo</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
         <div className="productos">
@@ -388,7 +389,7 @@ function HomePage() {
                 <label className="subtitle">Cuánto necesitas?</label>
                 <textarea className="input1 marginb" name="message" required/>
               </div>
-              <input className="buttonEnviar marginb" type="submit" value="Enviar" />
+              <motion.input whileTap={{scale:1.1}} className="buttonEnviar marginb" type="submit" value="Enviar" />
             </form>
           </div>
         </div>
@@ -396,8 +397,8 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div className="flex3 marginb">
-          <h1 className="title marginr">Nosotros</h1>
+        <div ref={sectionRef} className="flex3 marginb">
+          <h1 id="nosotros" className="title marginr">Nosotros</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
         <div>
