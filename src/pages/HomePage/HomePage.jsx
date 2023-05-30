@@ -11,13 +11,15 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import SwiperCore, { Autoplay } from 'swiper';
 import emailjs from '@emailjs/browser';
 import { Modal } from "react-bootstrap";
+import { PayPalButtonsComponentProps } from '@paypal/react-paypal-js';
+import { usePayPalScriptReducer } from '@paypal/react-paypal-js';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import 'animate.css';
-
-
 import 'swiper/swiper-bundle.css';
 import 'swiper/swiper-bundle.min.css';
 
 function HomePage() {
+	const sectionRef = useRef(null);
   const [carrito, setCarrito] = useState([]);
   const [bodyOverflow, setBodyOverflow] = useState('auto');
 
@@ -77,7 +79,7 @@ function HomePage() {
 	};
 
   function nosotros() {
-    window.location.href = "/nosotros";
+    window.location.href = "#nosotros";
   }
 
   const form = useRef();
@@ -144,6 +146,22 @@ function HomePage() {
     setCarrito(newCarrito);
   };
 
+	const handleSuccess = (details, data) => {
+		Swal.fire(
+			'Pago recibido!',
+			'En breve nos pondremos en contacto contigo al correo proporcionado!',
+			'success'
+		)
+  };
+
+  const handleError = (error) => {
+    Swal.fire(
+			'no se realizo ningun pago!',
+			'no te preocupes, no se ha realizado ningun cargo a tu tarjeta!',
+			'error'
+		)
+  };
+
 
   return (
     <div>
@@ -156,7 +174,12 @@ function HomePage() {
 				animate={show ? "visible" : "hidden"}
 				variants={modalAnimation}
 			>
-
+				<PayPalScriptProvider
+  options={{
+    "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID, // Reemplaza con tu ID de cliente de PayPal
+    currency: "MXN" // Moneda del pago
+  }}
+>
       <Modal
         show={cartModalIsOpen}
         onHide={closeCartModal}
@@ -176,23 +199,72 @@ function HomePage() {
               {carrito.map((producto, index) => (
 								<li key={index}>
 									<div className="cantidad-carrito">
-										<img onClick={() => aumentarCantidad(index)} src="images/mas.png" alt="" className="mas-menos" />
-										<img className="png-carrito" src={`images/${producto.png}.png`} alt="" />
+										<motion.img whileTap={{scale:2.0}} onClick={() => aumentarCantidad(index)} src="images/mas.png" alt="" className="mas-menos" />
+										<motion.img whileTap={{scale:2.0}} className="png-carrito" src={`images/${producto.png}.png`} alt="" />
 										<h1>{`x${producto.cantidad}`}</h1>
-										<img onClick={() => disminuirCantidad(index)} src="images/menos.png" alt="" className="mas-menos" />
+										<motion.img whileTap={{scale:2.0}} onClick={() => disminuirCantidad(index)} src="images/menos.png" alt="" className="mas-menos" />
 										<p>{producto.nombre}</p>
                   <p>Precio: {producto.precio * producto.cantidad}</p>
-									<img onClick={() => eliminarProducto(index)} src="images/eliminar.png" alt="" className="mas-menos" />
+									<motion.img whileTap={{scale:2.0}} onClick={() => eliminarProducto(index)} src="images/eliminar.png" alt="" className="mas-menos" />
 									</div>
 									<hr className="hr" />
                 </li>
               ))}
             </ul>
 							<p className="total">Total: ${totalAPagar}</p>
-							<button className="button-pagar">Pagar</button>
+							{/* <motion.button whileTap={{scale:1.1}} className="button-pagar">Pagar</motion.button> */}
+							<PayPalButtons
+  createOrder={(data, actions) => {
+    // Lógica para crear la orden de pago en PayPal
+		const totalAPagar = carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0);
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: totalAPagar.toFixed(2) // Monto total a pagar
+          }
+        }
+      ]
+    });
+  }}
+	onApprove={(data, actions) => {
+    // Lógica para procesar el pago una vez que el usuario lo aprueba
+    return actions.order.capture().then((details) => {
+      // Realiza acciones adicionales después de un pago exitoso
+      const nombre = details.payer.name.given_name;
+      const correoElectronico = details.payer.email_address;
+      const pedido = carrito.map((producto) => `${producto.nombre} - Cantidad: ${producto.cantidad}`).join('\n');
+
+      Swal.fire({
+        title: 'Pago exitoso',
+        text: `¡Gracias por tu compra, ${nombre}!`,
+        icon: 'success',
+        html: `<p>Correo electrónico: ${correoElectronico}</p><p>Pedido:</p><pre>${pedido}</pre>`
+      });
+    });
+  }}
+  onError={(err) => {
+		console.log(err)
+    Swal.fire(
+      'Cobro no realizado',
+      `No te preocupes, no se ha realizado ningun cobro a tu tarjera <br/>${err}`,
+      'info'
+    );
+  }}
+	onCancel={(data, actions) => {
+    Swal.fire(
+      'Pago cancelado',
+      'El pago ha sido cancelado por el usuario, no te preocupes no se realizo ningun cobro a tu tarjeta.',
+      'info'
+    );
+  }}
+/>
+
+						{/* aqui va el boton para pago con paypal */}
           </div>
         )}
       </Modal>
+			</PayPalScriptProvider>
 				</motion.div>
       <img className="logo1 marginr marginl" src="images/logo3.png" alt="" />
       <img className="honeyCumb" src="images/honeyCumb.png" alt="" />
@@ -236,20 +308,20 @@ function HomePage() {
           <h1 className="title marginr">Nuestros Productos</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
-        <div className="productos">
+        <div id="productos" className="productos">
           <div className="boxProductos">
             <img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
             <h1 className="title1">Miel Natural</h1>
             <p className="subtitle">$299.00 / 1 Litro</p>
             <hr className="hr" />
-            <button className="buttonAgregar" onClick={agregarMiel}>Agregar al Carrito</button>
+            <motion.button whileTap={{scale:1.1}} className="buttonAgregar" onClick={agregarMiel}>Agregar al Carrito</motion.button>
           </div>
           <div className="boxProductos">
             <img className="marginl marginr pngProductos" src="images/limon.png" alt="" />
             <h1 className="title1">Limón Natural</h1>
             <p className="subtitle">$299.00 / 1 kilo</p>
             <hr className="hr" />
-            <button className="buttonAgregar" onClick={agregarLimon}>Agregar al Carrito</button>
+            <motion.button whileTap={{scale:1.1}} className="buttonAgregar" onClick={agregarLimon}>Agregar al Carrito</motion.button>
           </div>
           <div className="column boxProductos">
             <div className="row">
@@ -282,14 +354,14 @@ function HomePage() {
               <h1 className="title1">Té de Limón</h1>
               <p className="subtitle1">El té de limón es muy bueno para la salud, ya que aporta diferentes beneficios.</p>
               <hr className="hr" />
-              <button className="buttonAgregar">¡Conoce Más!</button>
+              <motion.button whileTap={{scale:1.1}} className="buttonAgregar">¡Conoce Más!</motion.button>
             </div>
             <div className="boxProductos">
               <img className="marginl marginr pngProductos" src="images/miel.png" alt="" />
               <h1 className="title1">Endulzar con Miel</h1>
               <p className="subtitle1">Endulzar tus bebidas y alimentos es mejor que usar azúcar procesada.</p>
               <hr className="hr" />
-              <button className="buttonAgregar">¡Conoce más!</button>
+              <motion.button whileTap={{scale:1.1}} className="buttonAgregar">¡Conoce más!</motion.button>
             </div>
           </div>
         </div>
@@ -297,7 +369,7 @@ function HomePage() {
       <hr className="hr" />
       <div>
         <div className="flex3 marginb">
-          <h1 className="title marginr">Mayoreo</h1>
+          <h1 id="mayoreo" className="title marginr">Mayoreo</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
         <div className="productos">
@@ -317,7 +389,7 @@ function HomePage() {
                 <label className="subtitle">Cuánto necesitas?</label>
                 <textarea className="input1 marginb" name="message" required/>
               </div>
-              <input className="buttonEnviar marginb" type="submit" value="Enviar" />
+              <motion.input whileTap={{scale:1.1}} className="buttonEnviar marginb" type="submit" value="Enviar" />
             </form>
           </div>
         </div>
@@ -325,8 +397,8 @@ function HomePage() {
       </div>
       <hr className="hr" />
       <div>
-        <div className="flex3 marginb">
-          <h1 className="title marginr">Nosotros</h1>
+        <div ref={sectionRef} className="flex3 marginb">
+          <h1 id="nosotros" className="title marginr">Nosotros</h1>
           <img className="honeyCumb1 marginl start" src="images/honeyCumb.png" alt="" />
         </div>
         <div>
